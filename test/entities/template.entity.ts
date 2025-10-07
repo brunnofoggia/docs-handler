@@ -1,5 +1,5 @@
 import { Column, Entity, ObjectLiteral, OneToMany, PrimaryColumn } from 'typeorm';
-import { set } from 'node-labs/lib/utils/entities';
+import { set } from '../utils/entities';
 
 import { TemplateConfigEntity } from './templateConfig.entity';
 

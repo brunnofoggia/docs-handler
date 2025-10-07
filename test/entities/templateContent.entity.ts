@@ -1,7 +1,7 @@
 import { Column, Entity, JoinColumn, ManyToOne, ObjectLiteral, OneToMany } from 'typeorm';
 
-import { set } from 'node-labs/lib/utils/entities';
-import { GenericEntity } from 'node-labs/lib/entities/generic';
+import { set } from '../utils/entities';
+import { GenericEntity } from '../entities/generic';
 
 import { TemplateConfigEntity } from './templateConfig.entity';
 import { TemplateContentConfigInterface } from 'interfaces/entities';

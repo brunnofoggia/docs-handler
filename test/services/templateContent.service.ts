@@ -1,4 +1,4 @@
-import { DynamicDatabase } from 'node-labs/lib/services/dynamicDatabase.service';
+import { DynamicDatabase } from './dynamicDatabase.service';
 
 import { TemplateContentEntity } from '../entities/templateContent.entity';
 
