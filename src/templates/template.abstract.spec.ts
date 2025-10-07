@@ -2,20 +2,17 @@ import { DataSource } from 'typeorm';
 import { DeepPartial } from '../common/types/deepPartial';
 
 import { DatabaseConnect } from '@test/utils/connect';
-import { projectUid, templateConfigList } from '@test/mock/entities/templateConfig';
+import { projectUid } from '@test/mock/entities/templateConfig';
 import { TemplateService } from '@test/services/template.service';
 import { TemplateConfigService } from '@test/services/templateConfig.service';
 import { TemplateContentService } from '@test/services/templateContent.service';
-import { templateRecursiveHtml, templateSingleHtml } from '@test/mock/entities/template';
+import { templateRecursiveHtml } from '@test/mock/entities/template';
 import { getServices } from '@test/utils/prepareData';
-import { getError } from 'utils';
-import { DocGeneratorErrorType } from '../types/error';
 import { TemplateDomain } from '../domain/Template';
-import { TemplateGenerator } from 'templates/template.abstract';
 import { TemplateConfigInterface, TemplateContentInterface } from 'interfaces/entities';
 import { HtmlGenerator } from './html';
 import { TextStreamUtil } from 'cloud-solutions/dist/local/storage/textStreamUtil';
-import { userFetchFn, userHeader, userList } from '@test/mock/data/user';
+import { userFetchFn, userHeader } from '@test/mock/data/user';
 import { findCook } from 'domain/Template.test';
 import { DatabaseOptions } from 'interfaces/domain';
 

@@ -8,7 +8,13 @@ import { projectUid, templateConfigList } from '@test/mock/entities/templateConf
 import { TemplateService } from '@test/services/template.service';
 import { TemplateConfigService } from '@test/services/templateConfig.service';
 import { TemplateContentService } from '@test/services/templateContent.service';
-import { templateList, templateMultipleCsv, templateMultipleHtml, templateRecursiveHtml, templateSingleHtml } from '@test/mock/entities/template';
+import {
+    templateList,
+    templateMultipleCsv,
+    templateMultipleHtml,
+    templateRecursiveHtml,
+    templateSingleHtml,
+} from '@test/mock/entities/template';
 import { getServices } from '@test/utils/prepareData';
 import { templateContentList } from '@test/mock/entities/templateContent';
 import { getError } from 'utils';
@@ -100,7 +106,7 @@ describe('Domain > DocGenDomain', () => {
                 database: databaseConfig,
             });
 
-            await expect(async () => templateDomain.checkTemplateConfig()).rejects.toThrowError(getError(DocGeneratorErrorType.NO_CONFIG));
+            await expect(async () => templateDomain.checkTemplateConfig()).rejects.toThrow(getError(DocGeneratorErrorType.NO_CONFIG));
         });
     });
 

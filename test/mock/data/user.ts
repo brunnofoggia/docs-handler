@@ -1,27 +1,29 @@
 import { faker } from '@faker-js/faker';
 import { sleep } from '../../../src/common/utils';
 
+const fakeUsername = faker.internet.userName;
+
 export const userHeader = ['Id', 'Name', 'Email', 'Birth', 'Savings'];
 
 let id = 0;
 const savingsOptions = { min: 1000, max: 10000 };
 export const userA = {
     id: id++,
-    name: faker.internet.userName(),
+    name: fakeUsername(),
     email: faker.internet.email(),
     birth: faker.date.birthdate(),
     savings: faker.number.int(savingsOptions),
 };
 export const userB = {
     id: id++,
-    name: faker.internet.userName(),
+    name: fakeUsername(),
     email: faker.internet.email(),
     birth: faker.date.birthdate(),
     savings: faker.number.int(savingsOptions),
 };
 export const userC = {
     id: id++,
-    name: faker.internet.userName(),
+    name: fakeUsername(),
     email: faker.internet.email(),
     birth: faker.date.birthdate(),
     savings: faker.number.int(savingsOptions),

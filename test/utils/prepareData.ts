@@ -1,3 +1,4 @@
+import { IsNull, Not } from 'typeorm';
 import { templateList } from '../mock/entities/template';
 import { templateConfigList } from '../mock/entities/templateConfig';
 import { templateContentList } from '../mock/entities/templateContent';
@@ -39,9 +40,15 @@ export async function seed(conn): Promise<void> {
 export async function clear(conn): Promise<void> {
     const { templateService, templateConfigService, templateContentService } = getServices(conn);
     for (const service of [templateContentService, templateConfigService, templateService]) {
-        await service.getRepository().delete({});
+        const clausule = {} as any;
+        clausule[service.getIdAttribute()] = Not(IsNull());
+
+        await service.getRepository().delete(clausule);
         if (service.getIdAttribute() === 'id')
-            await service.getDataSource().createQueryRunner().query(`ALTER SEQUENCE ${service.getMetadata().tableName}_id_seq RESTART WITH 1;`);
+            await service
+                .getDataSource()
+                .createQueryRunner()
+                .query(`ALTER SEQUENCE ${service.getMetadata().tableName}_id_seq RESTART WITH 1;`);
 
         // console.log(`reseted "${service.getEntity().name}"`);
     }
