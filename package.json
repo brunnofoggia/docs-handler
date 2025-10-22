@@ -1,6 +1,6 @@
 {
     "name": "docs-handler",
-    "version": "0.15.4",
+    "version": "0.16.0",
     "description": "",
     "license": "ISC",
     "author": "Bruno Foggia",
@@ -20,12 +20,15 @@
         "test:docker:down": "docker compose down"
     },
     "dependencies": {
-        "cloud-solutions": "^3.0.1",
+        "cloud-solutions": "^4.5.0",
         "debug": "^4.4.3",
         "ejs": "^3.1.10",
-        "lodash": "^4.17.21"
+        "lodash": "^4.17.21",
+        "uuid": "^13.0.0"
     },
     "devDependencies": {
+        "@babel/core": "^7.28.4",
+        "@babel/preset-env": "^7.28.3",
         "@commitlint/config-conventional": "^20.0.0",
         "@faker-js/faker": "^8.4.0",
         "@types/jest": "^30.0.0",
@@ -34,6 +37,7 @@
         "@typescript-eslint/eslint-plugin": "^8.45.0",
         "@typescript-eslint/parser": "^8.45.0",
         "axios": "^1.12.2",
+        "babel-jest": "^30.2.0",
         "commitlint": "^20.1.0",
         "cz-conventional-changelog": "^3.3.0",
         "dotenv": "^17.2.3",

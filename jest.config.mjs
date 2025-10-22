@@ -12,6 +12,13 @@ export default {
     /* presets: https://kulshekhar.github.io/ts-jest/docs/next/getting-started/presets */
     preset: 'ts-jest/presets/js-with-babel',
     transform: {
+        '^.+node_modules/uuid/.+\\.js$': [
+            'babel-jest',
+            {
+                presets: [['@babel/preset-env', { targets: { node: 'current' } }]],
+                sourceType: 'unambiguous',
+            },
+        ],
         '^.+\\.jsx?$': [
             'babel-jest',
             {
