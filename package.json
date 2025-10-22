@@ -1,6 +1,6 @@
 {
     "name": "docs-handler",
-    "version": "0.16.0",
+    "version": "0.16.1",
     "description": "",
     "license": "ISC",
     "author": "Bruno Foggia",
@@ -23,8 +23,7 @@
         "cloud-solutions": "^4.5.0",
         "debug": "^4.4.3",
         "ejs": "^3.1.10",
-        "lodash": "^4.17.21",
-        "uuid": "^13.0.0"
+        "lodash": "^4.17.21"
     },
     "devDependencies": {
         "@babel/core": "^7.28.4",
